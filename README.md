@@ -1,4 +1,4 @@
-# fraser-lab.github.io
+# https://github.com/ComparativeSystemsBiologyGroup/CSB.github.io
 ====================
 
 Technologies this website uses:  

@@ -1,5 +1,5 @@
 - name: home
-  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/"
+  link: "/CSB.github.io/"
   group: home
 
 - name: research
@@ -23,7 +23,7 @@
   group: news
 
 - name: join
-  link: "CSB.github.io/join"
+  link: "join"
   group: join
 
 - name: contact

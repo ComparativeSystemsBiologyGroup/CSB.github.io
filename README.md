@@ -1,4 +1,4 @@
-# https://github.com/ComparativeSystemsBiologyGroup/CSB.github.io
+# ComparativeSystemsBiologyGroup/CSB.github.io
 ====================
 
 Technologies this website uses:  

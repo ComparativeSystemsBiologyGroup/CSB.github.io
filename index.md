@@ -15,5 +15,5 @@ We are part of the [Department of Biosciences](https://eng.dbs.unimi.it/ecm/home
 Research in the lab is focused on the integration of Systems Biology and Comparative genomics, to enrich our understanding of evolutionary processes.
 {: .welcomefont}
 
-We are located At the Biosciences Department (Via Celoria 26, Milan), Tower A, ground floor.
+We are located at the Biosciences Department of the University of Milan (Via Celoria 26, Milan), Tower A, ground floor.
 {: .welcomefont}

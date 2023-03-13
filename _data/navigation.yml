@@ -1,6 +1,6 @@
-- name: home
-  link: "/CSB.github.io"
-  group: home
+#- name: home
+#  link: "/CSB.github.io"
+#  group: home
 
 - name: research
   link: "/research"

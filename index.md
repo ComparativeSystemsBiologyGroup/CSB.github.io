@@ -19,6 +19,6 @@ Research in the lab is focused on the integration of Systems Biology and Compara
 We are located at the Biosciences Department of the University of Milan (Via Celoria 26, Milan), Tower A, ground floor.
 {: .welcomefont}
 
-![Comparative Systems Biology Lab Logo]({{site.url}}/static/img/logo/operon_formation_short.gif){:style="max-width: 30%; height: 200;"}
+![Comparative Systems Biology Lab Logo](static/img/logo/operon_formation_short.gif){:style="max-width: 30%; height: 200;"}
 Operon formation goes wild.
 {: .welcomefont}

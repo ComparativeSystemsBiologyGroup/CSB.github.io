@@ -1,9 +1,9 @@
 - name: home
-  link: "https://comparativesystemsbiologygroup.github.io"
+  link: "https://comparativesystemsbiologygroup.github.io/"
   group: home
 
 - name: research
-  link: "/CSB.github.io/research"
+  link: "CSB.github.io/research"
   group: research
 
 - name: publications

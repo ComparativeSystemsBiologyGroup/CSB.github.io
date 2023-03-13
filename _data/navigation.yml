@@ -3,11 +3,11 @@
 #  group: home
 
 - name: research
-  link: "/research"
+  link: "research"
   group: research
 
 - name: publications
-  link: "/publications"
+  link: "publications"
   group: publications
 
 - name: members

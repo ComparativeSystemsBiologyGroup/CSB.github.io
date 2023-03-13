@@ -7,25 +7,25 @@
   group: research
 
 - name: publications
-  link: "/CSB.github.io/publications"
+  link: "CSB.github.io/publications"
   group: publications
 
 - name: members
-  link: "/CSB.github.io/members"
+  link: "CSB.github.io/members"
   group: members
 
 - name: teaching
-  link: "/CSB.github.io/courses"
+  link: "CSB.github.io/courses"
   group: courses
 
 - name: news
-  link: "/CSB.github.io/news"
+  link: "CSB.github.io/news"
   group: news
 
 - name: join
-  link: "/CSB.github.io/join"
+  link: "CSB.github.io/join"
   group: join
 
 - name: contact
-  link: "/CSB.github.io/contact"
+  link: "CSB.github.io/contact"
   group: contact

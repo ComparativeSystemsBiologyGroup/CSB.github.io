@@ -1,98 +1,66 @@
 ---
-title: Research in the Fraser Lab
+title: Comparative Systems Biology Lab  Lab
 layout: default
 group: research
 ---
 
 <div class="row">
 
-# Our research
-The long-term goals of our research are to understand how protein conformational ensembles are reshaped by chemical, genetic, and physical perturbations. We seek to quantify how these perturbations impact protein function and organismal fitness. We are best known for creating multitemperature X-ray data collection approaches, which are especially powerful when paired with multiconformer computational modeling to reveal otherwise inaccessible features of conformational ensembles. Our group integrates high resolution structural biology (X-ray, EM, NMR), functional studies (deep mutational scanning, enzymology), and computation to study biological mechanisms and to improve protein engineering and small molecule discovery. Group members move fluidly between computation and experiment, often inventing new methods to answer their questions.
+# What's comparative or evolutionary systems biology
+Comparative genomics is fundamental to guide experiments and provides tools for functional infor-mation transfer across genomes. Performing similar set of experiments on the same biological systemin different organisms, will enable the reconstruction of the corresponding networks of regulations.However, it is hard to imagine that we will be able to elucidate how the system evolved without adetailed understanding of its dynamical properties: evolution selects genetic circuits on the basis oftheir activity: in general, we may say that evolution selects a system’s arrangement on the basis ofthe input/output response with additional features also important, such as the robustness to changesin physical or biological conditions. Mathematical modelling of ”orthologous” biological systems indifferent organisms can provide information about how arrangement variations affect evolutionarymeaningful properties of the circuit, a mission that is almost impossible for static reconstructions.Modelling could for instance show how the often-redundant regulations of functionally important regulators affect the dynamic properties of the system. A natural question is how the different regulatoryschemes working in related species affect the dynamical properties of the system, to extrapolate im-portant evolutionary insights on the selective pressures that might have shaped the system. Are thealternative arrangements all similarly robust with respect to evolutionary or environmental variations?Can we understand which evolutionary changes are responsible for optimizing such robustness? Whatspecific property follows a particular arrangement? By integrating different sources of information intomeaningful mathematical models, we can study the dynamics of a system at a detail level impossibleto achieve through wet-lab experiments. That is, redundant, reduced or simply different regulations characterizing different organisms can be traced through experiment and comparative genomics, butunderstanding their effects on the properties of the system can best be achieved through dynamic models. While the study of a single model allows to understand its specific properties, it does notprovide understanding about the evolution of a system’s structure. We propose an approach that wecall Comparative Systems Biology, whose aim is to introduce evolutionary thinking in modelling approaches through the comparison of the reconstructions of “orthologous” systems in different species. Clearly we are working on many different issues, but this is where we would like to go! 
 
-#### We work on many different systems and proteins as we find ourselves drawn, again and again, to the tension of high resolution data in structural biology: as resolution gets better, modeling becomes easier... until the resolution gets too good... and then the ensemble begins to reveal itself and the fun challenges begin.
-<br>
-<br>
+(PDF) Manifest of the Comparative Systems Biology Unit. Available from: https://www.researchgate.net/publication/333748732_Manifest_of_the_Comparative_Systems_Biology_Unit [accessed Mar 13 2023].
 
 </div>
 
 <div class="row">
 
-### Identifying hidden alternative conformations of proteins and ligands in biophysical data
+### DNA replication provides a selective force for directing genome rearrangements toward the formation of operons
 
 <div class="col-md-7 order-md-1">
 
-We study proteins as conformational ensembles.
-Although X-ray crystallography is an ensemble experiment, the results are typically summarized with a single static structure.
-We develop [**software**](https://github.com/ExcitedStates/qfit-3.0) to discover the structural ensembles present in the crystal (or on the EM grid).
-The ensemble nature of proteins highlighted by this work feeds into all of our mechanistic studies that interpret the functional effects of mutations, that characterize designed and artificially-evolved proteins, or that seek to modulate protein function with small molecules.
-These methods development efforts are central to discovering new allosteric ligands, through high throughput crystallographic fragment screening efforts.
-We are expanding, this direction to include modeling and validating protein structural data generated by cryo-electron microscopy (using EMRinger and ensemble modeling) and through integrative approaches to discover cryptic ligand binding sites.
-These methods development efforts are central to discovering new allosteric ligands, through high throughput crystallographic fragment screening efforts.
+Metabolic Control Analysis studies showed that non-coordinated variations in enzyme concentrations can perturb fluxes and metabolite pools. Here, we focused on the integration of these concepts with the effect of DNA replication on transcripts abundance and how this may play a pivotal role for metabolic operon formation.
+DNA replication is nowadays considered as a global regulator of gene expression that overlap to classical transcriptional regulation in Bacteria. In certain species, copy number (CN) variations are wide and correlated with growth rate; fast growing E. coli cells can for instance harbor up to 10 active replication forks. This translates in differences of genes’ CN accordingly to their genomic position which can lead to dramatic stoichiometric differences of their transcripts. Our theoretical treatment shows that CN can translate into perturbations of metabolite homeostasis which can be minimized by reducing the difference in CNs of functionally related genes. This can be achieved by the evolutionary calibration of gene position along the chromosome, or promoter parameters. Our simulations with a realistic metabolic system demonstrated that gene clustering is a more effective stategy in Bacteria. A prediction of our hypothesis is that species where the CNs varies over a wider range, should have tighter gene organization, which we confirmed by means of comparative genomics analysis.
+In this work we identified a plausible selective force for clustering related genes into operons; this force is moreover able to select for intermediate steps thus providing a drive to the progressive formation of gene clusters during evolution.
+
 
 </div>
 <div class="col-md-5 order-md-2 align-self-center">
-<img class="img-fluid" src="/static/img/pub/2017_biel.jpg" alt="qFit">
-<!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
+<img class="img-fluid" src="/static/img/pub/Fig2_operons.png" alt="qFit">
+<!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/logo/unimiLogo_white.svg" alt="University of Milan (UNIMI)"></a> -->
 
 </div>
 </div>
 <div class="row">
 
-### Using multi-temperature X-ray data collection methods in mechanistic studies and ligand discovery campaigns
+### Modelling the effects of DNA replication on transcript abundance
 
 <div class="col-md-7 order-md-2">
 
-We recognized that the standard practice of cryocooling crystals could distort protein conformations.
-In both larger surveys and isolated mechanistic studies, we have demonstrated the value of room temperature data collection for revealing the structural basis of protein conformational dynamics, leading to new insights into enzymes, and increasing connections to dynamics studies from NMR and simulations.
-Additionally, we have identified how temperature can bias small molecule discovery, leading some fragment sites inaccessible at cryogenic temperatures and repositioning critical water molecules.
+While in mono-ploid species DNA replication can at most double a locus’ copy number (CN), fast-growing species like E. coli can have a steeper positional bias in CNs consequent to the presence of multiple active replication forks per cell. Since in Bacteria a locus can be expressed just after its replication, CN affects the abundance of transcripts. In this work we integrated models describing the genomic position- and division time-dependent CN variations of loci (Bremer & Churchward, 1977) into classical transcription regulation systems, to study their interactions. Results indicate that thanks to replication, the sensitivity of transcript abundance to the abundance of the regulator gains a positional pattern, with origin-proximal loci being more responsive and with an increased dynamic range of transcription rates. 
+The variance of transcript abundance is a combination of the variance of CNs, the variance of the transcription rate and their covariance. The latter is evolutionary interesting, because depending on its sign may amplify or demote the transcriptional regulator activity. By simulating the system over the range of possible covariances, we add that the input/output relations in the system become richer. 
+In summary, our work shows that the presence of replication introduces an extra-dimension in transcriptional regulation, reinforcing its role as a global regulator of gene expression, in addition to supercoiling. Additional approaches that may benefit from our work concern variance estimation in differential gene expression analysis, the estimation of promoter kinetic parameters using gene expression data and gene regulatory network reconstruction.
+
 </div>
 
 <div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/pub/2018_keedy_hill.jpg" alt="ptp1b">
+<img class="img-fluid" src="/static/img/pub/gemo23.png" alt="Sensitivities">
 </div>
 </div>
 <div class="row">
 
-### Determining structures that influence microbial-host interactions
+### 
 
 <div class="col-md-7 order-md-1 ">
 
-We are interested in the structural enzymology and potential therapeutic applications of the human enzymes that degrade chitin, the pervasive polymer that can cause inflammation in the context of allergy and asthma. Using high resolution cryo-electron microscopy (cryo-EM), we are studying the mechanisms of action to newly synthesized antibiotics (in collaboration with the [Seiple](https://seiplegroup.ucsf.edu/) and [Fujimori](https://fujimorilab.ucsf.edu) labs). With this platform, we are also pushing on cryo-EM data processing and refinement methods to enable structure-based drug design, now achieving resolutions better than 2.0 Å. With the improved molecules we generate, we are defining potential resistance mechanisms to these antibiotics using a combination of structural biology and deep mutational scanning experiments. In recent work, we are collaborating with the Bondy-Denomy lab to define the structural basis of anti-CRISPR proteins using a combination of X-ray crystallography, cryo-EM, and NMR. The mechanism of action for many of these proteins remains mysterious.
+Active DNA replication of circular genomes in prokaryotes produces a gradient of copy number of loci that decreases toward the terminus, an effect particularly evident in mero-oligoploid species. Several genomic asymmetries unfold over the ori/ter axis, such as GC skew, the orientation of coding sequences, abundance of phages, mutation rate, highlighting that the fundamental role of replication goes well beyond the mere copying of the genome and impacts on multiple genome features. On the other hand, the mechanistic basis for those patterns is still under debate.  Here we show that active DNA replication enables bacterial species to lower the fitness threshold under which an allele is practically neutral; this is achieved by its role as a multiplier of the probability of fixation of an allele in the population thus providing a simple and elegant solution to several unexplained genomic patterns observed since long, like an increased mutation rate toward the terminus. Additionally, by introducing DNA replication in simple graph models we highlight its role as a device for generating genomic variations. More in detail, the translocation of a gene in an actively copied chromosome, results in chromosomes with different events for the gene (translocation, duplication or deletion). 
+
+
 </div>
 
 <div class="col-md-3 order-md-2 align-self-center">
 
-<img class="img-fluid" src="/static/img/pub/2019_li_pellegrino.jpg" alt="antibiotic">
+<img class="img-fluid" src="/static/img/pub/replication_and_translocations_fig1.png" alt="Translocations">
 </div>
 </div>
-<div class="row">
 
-### Identifying unifying concepts between systems and structural biology
-
-<div class="col-md-7 order-md-2">
-
-
-We are intrigued by the similarities in genetic epistasis and thermodynamic measurements and are applying these insights to large-scale studies of point mutants and posttranslational modifications. We attempt to connect the response to genetic (mutation), chemical (ligands), and physical (temperature) in experiments to define the basis of allosteric regulation and function. We like to bring an evolutionary biology perspective to the table to understand the relative importance of these different perturbations in shaping the proteins we see today.
-</div>
-
-<div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/pub/2020_gordon_jang_bouhaddou_xu_obernier_white_omeara_rezelj.png" alt="hairball">
-</div>
-</div>
-<div class="row">
-
-### Creating new time-resolved experiments to probe correlated motions in proteins
-
-<div class="col-md-7 order-md-1">
-
-A major limitation of most biophysical techniques is the inability to directly reveal correlations in motions between distinct regions of macromolecules.
-We are taking advantage of the new capabilities of next-generation X-ray free electron laser (X-FEL) light sources to perform radiation damage-free imaging of proteins and to watch how protein ensembles respond when perturbed by rapid temperature jumps using the X-FEL.
-At equilibrium, X-ray diffuse scattering has the potential to reveal these motions; however, we currently lack the ability to collect, integrate, and refine diffuse scattering data.
-Our long-term goal is to increase the information content of every X-ray diffraction experiment to reveal atomic level coupling at high resolution and improved models of grouped flexibility at low resolution.
-</div>
-
-<div class="col-md-5 order-md-2 align-self-center ">
-<img class="img-fluid" src="/static/img/pub/2019_thompson.jpg" alt="tjump">
-</div>
-
-</div>

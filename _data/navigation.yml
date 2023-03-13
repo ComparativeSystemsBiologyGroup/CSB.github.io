@@ -3,33 +3,33 @@
 #  group: home
 
 - name: research
-  link: "research"
+  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/research"
   group: research
 
 - name: publications
-  link: "publications"
+  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/publications"
   group: publications
 
 - name: members
-  link: "members"
+  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/members"
   group: members
 
 - name: teaching
-  link: "courses"
+  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/courses"
   group: courses
 
 - name: news
-  link: "news"
+  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/news"
   group: news
 
 - name: join
-  link: "join"
+  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/join"
   group: join
 
 - name: contact
-  link: "contact"
+  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/contact"
   group: contact
   
 - name: talks
-  link: "talks"
+  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/talks"
   group: join

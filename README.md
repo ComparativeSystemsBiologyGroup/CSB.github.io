@@ -1,7 +1,7 @@
 # ComparativeSystemsBiologyGroup/CSB.github.io
 ====================
 
-Technologies this website uses:  
+Technologies this website uses :  
 
     Jekyll  
     Github Pages  

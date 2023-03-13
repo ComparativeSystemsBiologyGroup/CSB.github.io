@@ -25,12 +25,7 @@ In this work we identified a plausible selective force for clustering related ge
 
 
 </div>
-<div class="col-md-5 order-md-2 align-self-center">
-<img class="img-fluid" src="/static/img/pub/Fig2_operons.png" alt="qFit">
-<!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="static/img/logo/unimiLogo_white.svg" alt="University of Milan (UNIMI)"></a> -->
 
-</div>
-</div>
 <div class="row">
 
 ### Modelling the effects of DNA replication on transcript abundance

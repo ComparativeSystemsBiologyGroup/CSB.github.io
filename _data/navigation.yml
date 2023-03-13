@@ -1,5 +1,5 @@
 - name: home
-  link: "CSB.github.io"
+  link: "/"
   group: home
 
 - name: research

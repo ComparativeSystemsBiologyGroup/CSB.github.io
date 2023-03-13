@@ -1,31 +1,31 @@
 - name: home
-  link: "CSB.github.io/"
+  link: "CSB.github.io"
   group: home
 
 - name: research
-  link: "research"
+  link: "/research"
   group: research
 
 - name: publications
-  link: "publications"
+  link: "/publications"
   group: publications
 
 - name: members
-  link: "members"
+  link: "/members"
   group: members
 
 - name: teaching
-  link: "courses"
+  link: "/courses"
   group: courses
 
 - name: news
-  link: "news"
+  link: "/news"
   group: news
 
 - name: join
-  link: "join"
+  link: "/join"
   group: join
 
 - name: contact
-  link: "contact"
+  link: "/contact"
   group: contact

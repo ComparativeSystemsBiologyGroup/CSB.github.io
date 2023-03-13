@@ -1,31 +1,31 @@
 - name: home
-  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io"
+  link: "https://comparativesystemsbiologygroup.github.io"
   group: home
 
 - name: research
-  link: "/research"
+  link: "/CSB.github.io/research"
   group: research
 
 - name: publications
-  link: "/publications"
+  link: "/CSB.github.io/publications"
   group: publications
 
 - name: members
-  link: "/members"
+  link: "/CSB.github.io/members"
   group: members
 
 - name: teaching
-  link: "/courses"
+  link: "/CSB.github.io/courses"
   group: courses
 
 - name: news
-  link: "/news"
+  link: "/CSB.github.io/news"
   group: news
 
 - name: join
-  link: "/join"
+  link: "/CSB.github.io/join"
   group: join
 
 - name: contact
-  link: "/contact"
+  link: "/CSB.github.io/contact"
   group: contact

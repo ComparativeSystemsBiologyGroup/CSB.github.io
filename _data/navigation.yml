@@ -29,3 +29,7 @@
 - name: contact
   link: "contact"
   group: contact
+  
+- name: talks
+  link: "talks"
+  group: join

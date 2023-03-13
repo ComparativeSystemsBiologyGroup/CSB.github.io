@@ -13,6 +13,7 @@ of the [University of Milan](https://www.unimi.it/en).
 
 ![Comparative Systems Biology Lab Logo](static/img/pub/gemo23.png){:style="max-width: 40%; height: auto;"}
 
+
 Research in the lab is focused on the integration of Systems Biology and Comparative genomics, to enrich our understanding of evolutionary processes.
 {: .welcomefont}
 

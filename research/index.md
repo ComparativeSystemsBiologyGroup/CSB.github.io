@@ -50,11 +50,19 @@ In summary, our work shows that the presence of replication introduces an extra-
 
 <div class="col-md-7 order-md-1 ">
 
-Active DNA replication of circular genomes in prokaryotes produces a gradient of copy number of loci that decreases toward the terminus, an effect particularly evident in mero-oligoploid species. Several genomic asymmetries unfold over the ori/ter axis, such as GC skew, the orientation of coding sequences, abundance of phages, mutation rate, highlighting that the fundamental role of replication goes well beyond the mere copying of the genome and impacts on multiple genome features. On the other hand, the mechanistic basis for those patterns is still under debate.  Here we show that active DNA replication enables bacterial species to lower the fitness threshold under which an allele is practically neutral; this is achieved by its role as a multiplier of the probability of fixation of an allele in the population thus providing a simple and elegant solution to several unexplained genomic patterns observed since long, like an increased mutation rate toward the terminus. Additionally, by introducing DNA replication in simple graph models we highlight its role as a device for generating genomic variations. More in detail, the translocation of a gene in an actively copied chromosome, results in chromosomes with different events for the gene (translocation, duplication or deletion). 
+Active DNA replication of circular genomes in prokaryotes produces a gradient of copy number of loci that decreases toward the terminus, an effect particularly evident in mero-oligoploid species. Several genomic asymmetries unfold over the ori/ter axis, such as GC skew, the orientation of coding sequences, abundance of phages, mutation rate, highlighting that the fundamental role of replication goes well beyond the mere copying of the genome, affecting multiple genome features. On the other hand, the mechanistic basis for those patterns is still under debate: why genes toward the end should experience faster mutation rates?  
+Here we show that this might only be apparent: active DNA replication might enable bacterial species to lower the fitness threshold under which an allele is practically neutral by changing the frequency of a new mutation at birth depending on its position on the ori/ter axis; this is achieved because the copy number of the mutated locus becomes a multiplier of the probability of fixation of an allele in the population. 
+Additionally, by introducing DNA replication in simple graph models we highlight its role as a device for generating genomic variations. More in detail, the translocation of a gene in an actively copied chromosome, results in chromosomes with different events for the gene (translocation, duplication or deletion). 
 </div>
 
 <div class="col-md-3 order-md-2 align-self-center">
+<img src="../static/img/pub/fitness_Fig2_new.png" alt="The Hypothesis"  width="200">
+
 <img src="../static/img/pub/replication_and_translocations_fig1.png" alt="Translocations"  width="200">
 </div>
 </div>
+
+
+
+
 

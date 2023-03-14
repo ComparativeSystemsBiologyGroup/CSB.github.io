@@ -1,162 +1,114 @@
----
-title: Publications from the Comparative Systems Biology Lab
-layout: default
-group: publications
----
-<h1>Publications</h1>
-<div class="container-fluid">
 
-{% assign sorted = site.publications | sort: "pub_date" | reverse %}
-{% for publication in sorted %}
-<hr>
-<div class="row" style="padding-top: 60px; margin-top: -60px;" id="{{publication.pmid}}">
-	<div>
-		<h5>{{ publication.title | markdownify  | remove: '<p>' | remove: '</p>'}}</h5>
-		<h6>{{ publication.authors | markdownify | remove: '<p>' | remove: '</p>' }}</h6>
-		{% if publication.journal %}
-			<i>{{ publication.journal }},</i>
-			{{publication.pub_date | split: "-" | first }}
-		{% else %}
-			<i>Biorxiv,</i>
-			{% if publication.biorxiv %}
-				{{publication.biorxiv | split: "." | first }}
-			{% else %}
-				{{publication.biorxiv_version | split: "." | first }}
-			{% endif %}
-		{% endif %}
-	</div>
-</div>
 
-<div class="row" style="padding-top: 20px; margin-top: -20px">
-	<div class="col-sm-6">
-		<img class = "img-fluid" src = "{{publication.image}}" alt =  "Key Figure" style="max-height: 200px;">
-	</div>
-	<ul class="col-sm-6">
-		<br>
-		<h6>Access the paper</h6>
-		<!--PMID-->
-		{% if publication.pmid %}
-		<li>PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/{{publication.pmid}}" title = "PubMed: {{publication.pmid}} (opens in new tab)" target="_blank"> {{publication.pmid}}</a></li>
-		{% endif %}
+<!DOCTYPE html>
+<b>Publications by Matteo Brilli</b>
+<body>
+  
+<!-- Copied directly from http://www.ephys.org/ by Damian J Williams -->
 
-		<!--PMCID - optional -->
-		{% if publication.pmcid %}
-		<li>PMCID: <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/{{publication.pmcid}}" title = "PubMed Central: {{publication.pmcid}} (opens in new tab)" target="_blank"> {{publication.pmcid}}</a></li>
-		{% endif %}
+<!-- ><input placeholder="Matteo Brilli" name="name"/> -->
 
-		<!--Biorxiv - optional -->
-		{% if publication.biorxiv %}
-		<li>Biorxiv Preprint: <a href="http://dx.doi.org/10.1101/{{publication.biorxiv}}" title =  "BioRxiv Preprint: {{publication.biorxiv}} (opens in new tab)" target="_blank"> {{publication.biorxiv | split: "." | last }}</a></li>
-		{% endif %}
+ <p id="demo"></p>
 
-		<!--Biorxiv specific version-->
-		{% if publication.biorxiv_version %}
-		<li>Biorxiv Preprint v{{publication.biorxiv_version | split: "." | last | split: "v" | last }}: <a href="http://www.biorxiv.org/content/10.1101/{{publication.biorxiv_version}}" title =  "BioRxiv Preprint: {{publication.biorxiv_version}} (opens in new tab)" target="_blank">{{publication.biorxiv_version | split: "." | last | split: "v" | first }}</a></li>
-		{% endif %}
+<script>
 
-		<!--Arxiv - optional -->
-		{% if publication.arxiv %}
-		<li>arXiv Preprint: <a href="https://arxiv.org/abs/{{publication.arxiv}}" title =  "aRxiv Preprint: {{publication.arxiv}} (opens in new tab)" target="_blank"> {{publication.arxiv}}</a></li>
-		{% endif %}
+//From "http://www.alexhadik.com/blog/2014/6/12/create-pubmed-citations-automatically-using-pubmed-api" adapted from reply to blog post by Les Ansley
 
-		<!--Chemrxiv - optional -->
-		{% if publication.chemrxiv %}
-		<li>ChemRxiv Preprint: <a href=" https://doi.org/10.26434/chemrxiv.{{publication.chemrxiv}}" title =  "ChemRxiv Preprint: {{publication.chemrxiv}} (opens in new tab)" target="_blank"> {{publication.chemrxiv}}</a></li>
-		{% endif %}
+var HTMLpublication = '%authors% (%date%) \'%title%\' <i>%journal%\</i>,<b>%volume%</b> %issue%%pages%PMID:<a href="%data%"target="_blank"> %PMID% </a></br></br>' //Formats output
 
-		<!-- PDF -->
-		{% if publication.journal %}
-		<li><a href="{{publication.pdf}}" title =  "PDF for {{publication.title}} (opens in new tab)" target="_blank"> Full Text</a></li>
-		{% endif %}
+var publications, idStringList;
+var pubmedSearchAPI = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?";
+var pubmedSummaryAPI = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?";
+var database = "db=pubmed";
+var returnmode = "&retmode=json";
+var returnmax = "&retmax=100";
+var searchterm = "&term=Matteo Brilli[Author]";
+var returntype = "&rettype=abstract";
+var idURL = pubmedSearchAPI + database + returnmode + returnmax + searchterm
+console.log(idURL);
 
-		<!-- SBGrid Datasets - optional -->
-		{% if publication.data %}
-		<li>Online Dataset{% if publication.data.size > 1 %}s{% endif %}:
-			{% if publication.data.size > 1 %}
-			<ul>
-				{% for dataset in publication.data %}
-				<li><a href="http://dx.doi.org/{{dataset}}" title =  "SBGrid Data Repository (opens in new tab)" target="_blank">doi: {{dataset}}</a></li>
-				{% endfor %}
-			</ul>
-			{% else %}
-			<a href="http://dx.doi.org/{{publication.data}}" title =  "SBGrid Data Repository (opens in new tab)" target="_blank">doi: {{publication.data}}</a>
-			{% endif %}
-		</li>
-		{% endif %}
+var getPubmed = function(url) { //passed url
+    return new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = function() {
+            var status = xhr.status;
+            if (status == 200) { //status 200 signifies OK (http://www.w3schools.com/ajax/ajax_xmlhttprequest_onreadystatechange.asp)
+                resolve(xhr.response);
+            } else {
+                reject(status);
+            }
+        };
+        xhr.send();
+    });
+};
 
-		<!--PDBs - optional-->
-		{% if publication.pdbs %}
-		<li>Deposited Structure{% if publication.pdbs.size > 1 %}s{% endif %}:
-			{% for code in publication.pdbs %}
-			<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId={{code}}" title =  "PDB: {{code}} (opens in new tab)" target="_blank">{{code}}</a>{% unless forloop.last %}, {% endunless %}
-			{% endfor %}
-		</li>
-		{% endif %}
+//const input = document.querySelector('input');
+//const log = document.getElementById('demo');
 
-		<!--EMDBs - optional-->
-		{% if publication.emdbs %}
-		<li>Deposited Map{% if publication.emdbs.size > 1 %}s{% endif %}:
-			{% for code in publication.emdbs %}
-			<a href="http://www.ebi.ac.uk/pdbe/entry/emdb/EMD-{{code}}" title =  "EMDB: {{code}} (opens in new tab)" target="_blank">{{code}}</a>{% unless forloop.last %}, {% endunless %}
-			{% endfor %}
-		</li>
-		{% endif %}
+// input.addEventListener('input', updateValue);
+//input.onchange = updateValue;
 
-		<!--pairs of maps and models - optional-->
-		{% if publication.paired_maps_and_models %}
-		<li>Deposited Structure{% if publication.paired_maps_and_models.size > 1 %}s{% endif %} and Map{% if publication.paired_maps_and_models.size > 1 %}s{% endif %}:
-			{% for pair in publication.paired_maps_and_models %}
-			<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId={{pair.pdb}}" title =  "PDB and Map pair: {{pair.pdb}} (opens in new tab)" target="_blank">{{pair.pdb}}</a>/<a href="http://www.ebi.ac.uk/pdbe/entry/emdb/EMD-{{pair.emdb}}">{{pair.emdb}}</a>{% unless forloop.last %}, {% endunless %}
-			{% endfor %}
-		</li>
-		{% endif %}
+//function updateValue(e) {
+  searchterm = "&term=Matteo Brilli[Author]";
+  idURL = pubmedSearchAPI + database + returnmode + returnmax + searchterm
+  console.log(idURL);
 
-		<!--maps and models and datasets - optional-->
-		{% if publication.paired_maps_and_models_and_data %}
-		<li>Deposited Structure{% if publication.paired_maps_and_models_and_data.size > 1 %}s{% endif %}, Map{% if publication.paired_maps_and_models_and_data.size > 1 %}s{% endif %}, and Data set{% if publication.paired_maps_and_models_and_data.size > 1 %}s{% endif %}:
-			{% for pair in publication.paired_maps_and_models_and_data %}
-			<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId={{pair.pdb}}" title =  "PDB and Map pair: {{pair.pdb}} (opens in new tab)" target="_blank">{{pair.pdb}}</a>/<a href="http://www.ebi.ac.uk/pdbe/entry/emdb/EMD-{{pair.emdb}}">{{pair.emdb}}</a>/<a href="https://empiar.org/{{pair.empiar}}/">{{pair.empiar}}</a>{% unless forloop.last %}, {% endunless %}
-			{% endfor %}
-		</li>
-		{% endif %}
+getPubmed(idURL).then(function(data) {
+    var idList = data.esearchresult.idlist;
+    idStringList = idList.toString(); //converts the idlist to a string to be appended to the search url
+    idStringList = '&id=' + idStringList;
+    summaryURL = pubmedSummaryAPI + database + returnmode + returntype + idStringList;
+    getPubmed(summaryURL).then(function(summary) {
+        publications = formatReferences(summary);
+        console.log(publications);	
+		document.getElementById("demo").innerHTML = publications;
+		
+    }, function(status) {
+        publications = 'Something went wrong getting the ids.';
+    });
+}, function(status) {
+    publications = 'Something went wrong getting the ids.';
+});
 
-		<!--zenodo records - optional-->
-		{% if publication.zenodo %}
-		<li>Zenodo Record{% if publication.zenodo.size > 1 %}s{% endif %}:
-			{% for record in publication.zenodo %}
-			<a href="https://www.zenodo.org/record/{{record.code}}/" title =  "Zenodo: {{record.code}} (opens in new tab)" target="_blank">{{record.code}}</a>{% if record.description %} ({{record.description}}){% endif %}{% unless forloop.last %}, {% endunless %}
-			{% endfor %}
-		</li>
-		{% endif %}
+//}
 
-		<!--Github - optional-->
-		{% if publication.github %}
-		<li>{% if publication.github.size > 1 %}GitHub Repositories:{%else%}GitHub Repository:{% endif %}
-			{% for record in publication.github %}
-				<a href="https://www.github.com/{{record.url}}/" alt="GitHub Repository: {{record.url}} (opens in new tab)" target="_blank">{{record.url}}</a>{% if record.description %} ({{record.description}}){% endif %}{% unless forloop.last %}, {% endunless %}
-			{% endfor %}
-		</li>
-		{% endif %}
+function formatReferences(summary) {
+    var publicationList = '';
+    for (refs in summary.result) {
+        if (refs !== 'uids') {
+            var authors = '';
+            var publication = '';
+            var authorCount = ((summary.result[refs].authors).length);
+            var i = 0;
+            while (i < authorCount - 1) {
+                authors += summary.result[refs].authors[i].name + ', ';
+                i++;
+            }
+            publication = HTMLpublication.replace('%data%', 'http://www.ncbi.nlm.nih.gov/pubmed/' + refs);
+            authors += summary.result[refs].lastauthor;
+            publication = publication.replace('%authors%', authors);
+            publication = publication.replace('%title%', summary.result[refs].title);
+            publication = publication.replace('%journal%', summary.result[refs].source);
+            publication = publication.replace('%PMID%', summary.result[refs].uid);
+            //Alter formatting if article is In Press
+            if (summary.result[refs].volume !== '') {
+                publication = publication.replace('%volume%', ' ' + summary.result[refs].volume);
+                publication = publication.replace('%issue%', '(' + summary.result[refs].issue + ')');
+                publication = publication.replace('%pages%', ': ' + summary.result[refs].pages + '. ');
+                var date = summary.result[refs].pubdate.slice(0, 4);
+                publication = publication.replace('%date%', date + '');
+            } else {
+                publication = publication.replace('%volume%', ' In Press');
+                publication = publication.replace('%issue%', '.');
+                publication = publication.replace('%pages%', '');
+                publication = publication.replace('%date%', '');
+            }
+            publicationList = publication + publicationList;
+        }
+    }
+    return (publicationList);
+} 
 
-		<!-- addgene plasmid - optional -->
-		{% if publication.addgene %}
-		<li>Addgene Plasmid{% if publication.addgene.size > 1 %}s{% endif %}:
-			{% for record in publication.addgene %}
-				<a href="https://www.addgene.org/{{record.plasmid}}/" alt="Addgene Plasmid: {{record.plasmid}} (opens in new tab)" target="_blank">{{record.plasmid}}</a>{% if record.description %} ({{record.description}}){% endif %}{% unless forloop.last %}, {% endunless %}
-			{% endfor %}
-		</li>
-		{% endif %}
-
-		<!--additional links - optional-->
-		{% if publication.links %}
-			<br>
-			<h6>Additional Link{% if publication.links.size > 1 %}s{% endif %}</h6>
-			{% for link in publication.links %}
-				<li><a href="{{link.url}}" alt="{{link.name}} (opens in new tab)" target="_blank">{{link.name}}</a></li>
-			{% endfor %}
-		{% endif %}
-	</ul>
-</div>
-<br>
-{% endfor %}
-</div>
+</script>

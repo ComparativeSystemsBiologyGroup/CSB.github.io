@@ -1,5 +1,5 @@
 ---
-name: Zahra Golestani Hotkani
+name: Zahra Golestani
 timeline_name: Zahra
 startdate: [2022-10-01]
 enddate: []

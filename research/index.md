@@ -37,7 +37,7 @@ In summary, our work shows that the presence of replication introduces an extra-
 
 </div>
 
-<img src="static/img/pub/gemo23.png" alt="Sensitivities">
+<img src="../static/img/pub/gemo23.png" alt="Sensitivities">
 </div>
 <div class="row">
 
@@ -49,7 +49,7 @@ Active DNA replication of circular genomes in prokaryotes produces a gradient of
 </div>
 
 <div class="col-md-3 order-md-2 align-self-center">
-<img src="static/img/pub/replication_and_translocations_fig1.png" alt="Translocations">
+<img src="../static/img/pub/replication_and_translocations_fig1.png" alt="Translocations">
 </div>
 </div>
 

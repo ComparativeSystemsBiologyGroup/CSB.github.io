@@ -1,5 +1,5 @@
-## Comparative Systems Biology Lab Members
-{% assign sorted = site.members | sort: "startdate" | reverse %}
+## Comparative Systems Biology Lab Alumni
+{% assign sorted = site.members | sort: "enddate" | reverse %}
 {% for member in sorted %}
 
 {% if member.enddate == empty or member.startdate.size != member.enddate.size %}
@@ -7,12 +7,12 @@
 {% endif %}
 
 {% assign position = member.position | downcase %}
-<!--{% if position contains "srtp" or position contains "intern" or position 
+{% if position contains "srtp" or position contains "intern" or position 
   contains "sep" or position contains "visiting" or position contains "ucsf-usf" %}
 {% unless position contains "affiliate" %}
 {% continue %}
 {% endunless %}
-{% endif %} -->
+{% endif %}
 
 <hr>
 <div id = "{{member.name}}" style="padding-top: 60px; margin-top: -60px;">
@@ -73,3 +73,141 @@ Subsequently: {{member.subsequent}} <br>
 </p>
 </div>
 {% endfor %}
+
+<br>
+## UCSF-USF Interns
+{% for undergraduate in sorted %}
+
+{% assign position = undergraduate.position | downcase %}
+{% unless position contains "ucsf-usf" %}
+{% continue %}
+{% endunless %}
+
+<hr>
+<div id = "{{undergraduate.name}}" style="padding-top: 60px; margin-top: -60px;">
+<p><strong>{{undergraduate.name}}</strong> - <em>{{undergraduate.position | markdownify | remove: '<p>' | remove: '</p>' }}</em><br>
+
+{% if undergraduate.pronouns %}
+<em>{{undergraduate.pronouns}}</em><br>
+{% endif %}
+
+{% assign start = undergraduate.startdate | first | date:"%Y" %}
+{% assign end = undergraduate.enddate | last | date:"%Y" %}
+
+{% if start == end %}
+{{ start }}<br>
+{% else %}
+{{ start }} - {{ end }}<br>
+{% endif %}
+
+{% if undergraduate.subsequent %}
+Subsequently: {{undergraduate.subsequent}}<br>
+{% endif %}
+</p>
+</div> {% endfor %}
+
+
+<br>
+## Undergraduate Interns
+{% for undergraduate in sorted %}
+
+{% assign position = undergraduate.position | downcase %}
+
+{% unless position contains "srtp" or position contains "intern" %}
+    {% continue %}
+{% endunless %}
+{% if position contains "affiliate" or position contains "ucsf-usf"%}
+    {% continue %}
+{% endif %}
+
+<hr>
+<div id = "{{undergraduate.name}}" style="padding-top: 60px; margin-top: -60px;">
+<p><strong>{{undergraduate.name}}</strong> - <em>{{undergraduate.position | markdownify | remove: '<p>' | remove: '</p>' }}</em><br>
+
+{% if undergraduate.pronouns %}
+<em>{{undergraduate.pronouns}}</em><br>
+{% endif %}
+
+{% assign start = undergraduate.startdate | first | date:"%Y" %}
+{% assign end = undergraduate.enddate | last | date:"%Y" %}
+
+{% if start == end %}
+{{ start }}<br>
+{% else %}
+{{ start }} - {{ end }}<br>
+{% endif %}
+
+{% if undergraduate.subsequent %}
+Subsequently: {{undergraduate.subsequent}}<br>
+{% endif %}
+</p>
+</div> {% endfor %}
+
+
+<br>
+## [SEP High School Interns](http://sep.ucsf.edu/hs_programs/high-school-intern-program/)
+{% for student in sorted %}
+
+{% assign position = student.position | downcase %}
+{% unless position contains "sep" %}
+{% continue %}
+{% endunless %}
+
+<hr>
+<div id = "{{student.name}}" style="padding-top: 60px; margin-top: -60px;">
+<p><strong>{{student.name}}</strong><br>
+
+{% assign start = student.startdate | first | date:"%Y" %}
+{% assign end = student.enddate | last | date:"%Y" %}
+
+{% if start == end %}
+{{ start }}<br>
+{% else %}
+{{ start }} - {{ end }}<br>
+{% endif %}
+
+{% if student.pronouns %}
+<em>{{student.pronouns}}</em> <br>
+{% endif %}
+{% if student.subsequent %}
+Subsequently: {{student.subsequent}}<br>
+{% endif %}
+</p>
+</div> {% endfor %}
+
+
+<br>
+## Fraser Lab Visitors
+{% for visitor in sorted %}
+
+{% assign position = visitor.position | downcase %}
+{% unless position contains "visiting" %}
+{% continue %}
+{% endunless %}
+
+<hr>
+<div id = "{{visitor.name}}" style="padding-top: 60px; margin-top: -60px;">
+{% if visitor.current %}
+<p><strong>{{visitor.name}}</strong> - <em>{{visitor.position | markdownify | remove: '<p>' | remove: '</p>' }} from {{visitor.current}}</em><br>
+{% else  %}
+<p><strong>{{visitor.name}}</strong> - <em>{{visitor.position | markdownify | remove: '<p>' | remove: '</p>' }}</em><br>
+{% endif %}
+
+{% assign start = visitor.startdate | first | date:"%Y" %}
+{% assign end = visitor.enddate | last | date:"%Y" %}
+
+{% if end %}
+{% if start == end %}
+{{ start }}<br>
+{% else %}
+{{ start }} - {{ end }}<br>
+{% endif %}
+{% else %}
+{{ start }} - Present<br>
+{% endif %}
+
+{% if visitor.pronouns %}
+<em>{{visitor.pronouns}}</em> <br>
+{% endif %}
+</p>
+</div> {% endfor %}

@@ -8,4 +8,5 @@ position: Principal Investigator
 email: matteo.brilli (at) unimi.it
 orcid: 0000-0001-9891-4617
 scholar: qByzTP8AAAAJ
+linkedin: matteo-brilli-3022a923
 ---

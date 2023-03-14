@@ -1,6 +1,10 @@
+---
+title: Comparative Systems Biology Lab
+layout: home
+group: home
+---
 
 
-<!DOCTYPE html>
 <b>Publications by Matteo Brilli</b>
 <body>
   
@@ -111,4 +115,4 @@ function formatReferences(summary) {
     return (publicationList);
 } 
 
-</script>
+</script>    

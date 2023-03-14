@@ -177,7 +177,7 @@ Subsequently: {{student.subsequent}}<br>
 
 
 <br>
-## Fraser Lab Visitors
+## Comparative Systems Biology Lab Visitors
 {% for visitor in sorted %}
 
 {% assign position = visitor.position | downcase %}

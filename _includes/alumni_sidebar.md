@@ -145,36 +145,6 @@ Subsequently: {{undergraduate.subsequent}}<br>
 
 
 <br>
-## [SEP High School Interns](http://sep.ucsf.edu/hs_programs/high-school-intern-program/)
-{% for student in sorted %}
-
-{% assign position = student.position | downcase %}
-{% unless position contains "sep" %}
-{% continue %}
-{% endunless %}
-
-<hr>
-<div id = "{{student.name}}" style="padding-top: 60px; margin-top: -60px;">
-<p><strong>{{student.name}}</strong><br>
-
-{% assign start = student.startdate | first | date:"%Y" %}
-{% assign end = student.enddate | last | date:"%Y" %}
-
-{% if start == end %}
-{{ start }}<br>
-{% else %}
-{{ start }} - {{ end }}<br>
-{% endif %}
-
-{% if student.pronouns %}
-<em>{{student.pronouns}}</em> <br>
-{% endif %}
-{% if student.subsequent %}
-Subsequently: {{student.subsequent}}<br>
-{% endif %}
-</p>
-</div> {% endfor %}
-
 
 <br>
 ## Comparative Systems Biology Lab Visitors

@@ -7,14 +7,14 @@ image:
 altimage: 
 position: unimi
 subsequent: 
-email: Zahra.Golestanihotkani (at) studenti.unimi.it (at) unimi.it#username (at) domain.com #Enter your preferred public e-mail address
+email: Zahra.Golestanihotkani (at) studenti.unimi.it
 orcid: 
 scholar: 
-description: 
+description: ""
 pronouns: she/her
 website: 
 UNIMI: 
-twitter:  @username
-linkedin: username
-github: username
+twitter:  
+linkedin: 
+github: 
 ---

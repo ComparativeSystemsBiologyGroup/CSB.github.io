@@ -33,3 +33,7 @@
 - name: talks
   link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/talks"
   group: join
+  
+- name: collaborations
+  link: "https://comparativesystemsbiologygroup.github.io/CSB.github.io/collaborations"
+  group: join

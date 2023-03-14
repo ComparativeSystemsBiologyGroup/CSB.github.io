@@ -1,5 +1,5 @@
 ## Comparative Systems Biology Lab Members
-{% assign sorted = site.members | sort: "enddate" | reverse %}
+{% assign sorted = site.members | sort: "startdate" | reverse %}
 {% for member in sorted %}
 
 {% if member.enddate == empty or member.startdate.size != member.enddate.size %}

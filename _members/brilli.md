@@ -5,8 +5,7 @@ startdate: [2018-11-01]
 enddate: []
 image: static/img/members/brilli.jpg 
 altimage: static/img/members/brilli_pb.jpg
-position: unimi
-subsequent: likely dead
+position:  Principal Investigator
 email: matteo.brilli (at) unimi.it
 orcid: 0000-0001-9891-4617
 scholar: qByzTP8AAAAJ

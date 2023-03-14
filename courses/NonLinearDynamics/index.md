@@ -1,3 +1,9 @@
+---
+title: Non linear dynamics in Quantitative Biology (QB)
+layout: default
+group: courses
+---
+
 The last years have witnessed a transition of the biological sciences from a qualitative to a quantitative (hard) science. However, this transition can only take place if biologists become familiar with the mathematical instruments that are the basis for studying the systems quantitatively. In this course, we will discuss several approaches to the modelling of biological systems, giving particular attention to regulatory circuits (transcriptional or sRNA-dependent and their integration) and metabolic systems with a discussion of how these models can be exploited to rationalize the process of metabolic engineering.
 
 To achieve this task, we will present a few fundamental concepts of the field to then show how complicate dynamical behaviours can originate from relatively simple circuits thanks to the non-linearity and high interconnectedness that is intrinsic of biological systems.

@@ -8,7 +8,7 @@
 
 {% assign position = member.position | downcase %}
 {% if position contains "srtp" or position contains "intern" or position 
-  contains "sep" or position contains "visiting" or position contains "ucsf-usf" %}
+  contains "sep" or position contains "visiting" or position contains "unimi" %}
 {% unless position contains "affiliate" %}
 {% continue %}
 {% endunless %}
@@ -37,7 +37,7 @@ Subsequently: {{member.subsequent}} <br>
 {% endif %}
 
 {% if member.email %}
-{% unless member.email contains "ucsf.edu" or "fraserlab" %}
+{% unless member.email contains "unimi.it" or "csb" %}
 <em>{{member.email}}</em> <br>
 {% endunless %}
 {% endif %}
@@ -75,11 +75,11 @@ Subsequently: {{member.subsequent}} <br>
 {% endfor %}
 
 <br>
-## UCSF-USF Interns
+## unimi Interns
 {% for undergraduate in sorted %}
 
 {% assign position = undergraduate.position | downcase %}
-{% unless position contains "ucsf-usf" %}
+{% unless position contains "unimi" %}
 {% continue %}
 {% endunless %}
 
@@ -116,7 +116,7 @@ Subsequently: {{undergraduate.subsequent}}<br>
 {% unless position contains "srtp" or position contains "intern" %}
     {% continue %}
 {% endunless %}
-{% if position contains "affiliate" or position contains "ucsf-usf"%}
+{% if position contains "affiliate" or position contains "unimi"%}
     {% continue %}
 {% endif %}
 

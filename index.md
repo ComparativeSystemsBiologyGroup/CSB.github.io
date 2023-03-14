@@ -22,5 +22,5 @@ We are located at the Biosciences Department of the University of Milan (Via Cel
 ![Comparative Systems Biology Lab Logo](static/img/logo/operon_formation_short.gif){:style="max-width: 30%; height: 200;"}
 
 
-Operon formation goes wild, from .
+Operon formation goes wild, from one of our latest [preprints](https://www.biorxiv.org/content/10.1101/2022.09.05.506644v1).
 {: .welcomefont}

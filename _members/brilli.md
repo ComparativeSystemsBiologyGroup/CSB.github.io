@@ -14,8 +14,8 @@ In 2013 I started a new position in Italy, at the Fondazione Edmund Mach near Tr
 Here I am trying to combine my -omics expertise with mathematical modeling in different organisms and scales, from molecules, to populations."
 
 pronouns: he/him/his
-website: 
+website:
 twitter: @CompSysBiolUnit
 linkedin:
-github: 
+github:
 ---

@@ -22,6 +22,8 @@ Metabolic Control Analysis studies showed that non-coordinated variations in enz
 DNA replication is nowadays considered as a global regulator of gene expression that overlap to classical transcriptional regulation in Bacteria. In certain species, copy number (CN) variations are wide and correlated with growth rate; fast growing E. coli cells can for instance harbor up to 10 active replication forks. This translates in differences of genes’ CN accordingly to their genomic position which can lead to dramatic stoichiometric differences of their transcripts. Our theoretical treatment shows that CN can translate into perturbations of metabolite homeostasis which can be minimized by reducing the difference in CNs of functionally related genes. This can be achieved by the evolutionary calibration of gene position along the chromosome, or promoter parameters. Our simulations with a realistic metabolic system demonstrated that gene clustering is a more effective stategy in Bacteria. A prediction of our hypothesis is that species where the CNs varies over a wider range, should have tighter gene organization, which we confirmed by means of comparative genomics analysis.
 In this work we identified a plausible selective force for clustering related genes into operons; this force is moreover able to select for intermediate steps thus providing a drive to the progressive formation of gene clusters during evolution.
 
+<img src="../static/img/pub/Fig2_operons_.png" alt="Sensitivities" width="200">
+
 
 </div>
 
@@ -37,7 +39,10 @@ In summary, our work shows that the presence of replication introduces an extra-
 
 </div>
 
-<img src="../static/img/pub/gemo23.png" alt="Sensitivities">
+<img src="../static/img/pub/gemo23.png" alt="Sensitivities" width="200">
+
+
+
 </div>
 <div class="row">
 
@@ -49,7 +54,7 @@ Active DNA replication of circular genomes in prokaryotes produces a gradient of
 </div>
 
 <div class="col-md-3 order-md-2 align-self-center">
-<img src="../static/img/pub/replication_and_translocations_fig1.png" alt="Translocations">
+<img src="../static/img/pub/replication_and_translocations_fig1.png" alt="Translocations"  width="200">
 </div>
 </div>
 

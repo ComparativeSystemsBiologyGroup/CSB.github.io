@@ -8,8 +8,8 @@ name: Matteo Brilli #Include "Ph.D."" if applicable
 timeline_name: #If you would like your name to appear differently on the Lab timeline, fill out this line.
 startdate: [2018-11-01] #Enter your start date
 enddate: #[YYYY-MM-DD] Leave this blank until you leave the lab
-image: static/img/members/Brilli.jpg #365 x 365 pixels, 72 dpi
-altimage: #static/img/members/LastName_pb.jpg #365 x 365 pixels, 72 dpi
+image: static/img/members/brilli.jpg #365 x 365 pixels, 72 dpi
+altimage: static/img/members/brilli_pb.jpg #365 x 365 pixels, 72 dpi
 position: Professor #What is your job title in the group?
 subsequent: #Leave this blank until you leave the lab
 email: matteo.brilli (at) unimi.it#username (at) domain.com #Enter your preferred public e-mail address

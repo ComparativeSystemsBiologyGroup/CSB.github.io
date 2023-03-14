@@ -15,5 +15,4 @@ Here I am trying to combine my -omics expertise with mathematical modeling in di
 pronouns: he/him/his
 website: [CSB website](https://comparativesystemsbiologygroup.github.io/CSB.github.io)
 twitter: @CompSysBiolUnit
-
 ---

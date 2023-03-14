@@ -1,11 +1,11 @@
 ---
-name: Matteo Brilli #Include "Ph.D."" if applicable
+name: Matteo Brilli, Ph.D.
 timeline_name: Matteo
 startdate: [2018-11-01] 
-enddate: 
+enddate: []
 image: static/img/members/brilli.jpg 
 altimage: static/img/members/brilli_pb.jpg
-position: Principal Investigator 
+position: unimi
 subsequent: likely dead
 email: matteo.brilli (at) unimi.it
 orcid: 0000-0001-9891-4617
@@ -14,9 +14,8 @@ description: "I studied Biology at the University of Florence, the city where I 
 In 2013 I started a new position in Italy, at the Fondazione Edmund Mach near Trento, in north Italy. There I came back to omics data analysis focusing on one important grapevine pathogen, Plasmopara viticola. Since 2017, I am at the Department of Biosciences at the University of Milan, as a Professor since 2019, where I got affiliated to the EntoparLab (www......it).
 Here I am trying to combine my -omics expertise with mathematical modeling in different organisms and scales, from molecules, to populations."
 pronouns: he/him/his
-website: #https://website.com/ #Enter your personal/professional website
-UNIMI: #XXXXXXXX #UCSF Employees Profile ID only
-twitter: @CompSysBiolUnit #username
-linkedin: #username
-github: #username
+website: 
+twitter: @CompSysBiolUnit
+linkedin:
+github: 
 ---

@@ -1,9 +1,4 @@
-Required fields:
-Name, start date, image, altimage, position, email, ORCID, Google Scholar ID, description
-Optional fields:
-timeline_name, pronouns, scholar, website, twitter, linkedin, github
 ---
-#REQUIRED
 name: Bahareh Gharehkhanisenejani #Include "Ph.D."" if applicable
 timeline_name: Bahareh#If you would like your name to appear differently on the Lab timeline, fill out this line.
 startdate: [2022-10-01] #Enter your start date

@@ -1,7 +1,7 @@
 ---
 title: Comparative Systems Biology Lab
-layout: home
-group: home
+layout: default
+group: publications
 ---
 
 

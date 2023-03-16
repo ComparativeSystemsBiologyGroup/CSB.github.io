@@ -3,7 +3,7 @@ name: Bahareh Gharehkhanisenejani
 timeline_name: Bahareh
 startdate: [2022-10-01]
 enddate: []
-image: 
+image: ../static/img/members/gharehkhanisenejani.jpg
 altimage: 
 position: unimi
 subsequent: 

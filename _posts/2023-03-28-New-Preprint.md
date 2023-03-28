@@ -1,5 +1,5 @@
 ---
-title: New Comparative Systems Biology Lab Website!
+title: New preprint is out!
 author: Matteo Brilli
 layout: post
 group: news
